@@ -1,0 +1,45 @@
+INFO  14:50:57,129 - Compiling source file: C:\Users\krist\Documents\1. SEMESTAR\PP1\projekat\Projekat22_23\workspace\MJCompiler\test\program.mj
+INFO  14:50:57,154 - #2 program
+INFO  14:50:57,155 - #19 MJProgram
+INFO  14:50:57,155 - #19 int
+INFO  14:50:57,156 - #19 x
+INFO  14:50:57,157 - #5 ;
+INFO  14:50:57,157 - #19 int
+INFO  14:50:57,158 - #19 y
+INFO  14:50:57,158 - #5 ;
+INFO  14:50:57,158 - #19 int
+INFO  14:50:57,158 - #19 u
+INFO  14:50:57,158 - #8 ,
+INFO  14:50:57,158 - #19 k
+INFO  14:50:57,158 - #5 ;
+INFO  14:50:57,158 - #14 const
+INFO  14:50:57,158 - #19 int
+INFO  14:50:57,158 - #19 z
+INFO  14:50:57,158 - #12 =
+INFO  14:50:57,158 - #16 7
+INFO  14:50:57,159 - #5 ;
+INFO  14:50:57,159 - #14 const
+INFO  14:50:57,172 - #19 char
+INFO  14:50:57,172 - #19 c
+INFO  14:50:57,172 - #12 =
+INFO  14:50:57,172 - #17 a
+INFO  14:50:57,172 - #5 ;
+INFO  14:50:57,172 - #15 class
+INFO  14:50:57,172 - #19 Tina
+INFO  14:50:57,172 - #24 extends
+INFO  14:50:57,173 - #19 Filip
+INFO  14:50:57,173 - #3 {
+INFO  14:50:57,173 - #19 int
+INFO  14:50:57,174 - #19 a
+INFO  14:50:57,174 - #5 ;
+INFO  14:50:57,174 - #19 char
+INFO  14:50:57,174 - #19 t
+INFO  14:50:57,174 - #8 ,
+INFO  14:50:57,174 - #19 g
+INFO  14:50:57,174 - #5 ;
+INFO  14:50:57,174 - #19 int
+INFO  14:50:57,174 - #19 main
+INFO  14:50:57,174 - #6 (
+ERROR 14:50:57,174 - 
+Sintaksna greska na liniji 9
+ERROR 14:50:57,174 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 9

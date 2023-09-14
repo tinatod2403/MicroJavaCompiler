@@ -1,0 +1,33 @@
+INFO  13:56:57,639 - Compiling source file: C:\Users\krist\Documents\1. SEMESTAR\PP1\projekat\Projekat22_23\workspace\MJCompiler\test\program.mj
+INFO  13:56:57,668 - #2 program
+INFO  13:56:57,668 - #18 MJProgram
+INFO  13:56:57,668 - #18 int
+INFO  13:56:57,669 - #18 x
+INFO  13:56:57,670 - #5 ;
+INFO  13:56:57,670 - #18 int
+INFO  13:56:57,671 - #18 y
+INFO  13:56:57,671 - #5 ;
+INFO  13:56:57,671 - #18 int
+INFO  13:56:57,671 - #18 u
+INFO  13:56:57,671 - #8 ,
+INFO  13:56:57,671 - #18 k
+INFO  13:56:57,671 - #5 ;
+INFO  13:56:57,672 - #14 const
+INFO  13:56:57,672 - #18 int
+INFO  13:56:57,672 - #18 z
+INFO  13:56:57,672 - #12 =
+INFO  13:56:57,672 - #15 7
+INFO  13:56:57,672 - #5 ;
+INFO  13:56:57,672 - #14 const
+INFO  13:56:57,673 - #18 char
+INFO  13:56:57,673 - #18 c
+INFO  13:56:57,673 - #12 =
+INFO  13:56:57,673 - #16 a
+INFO  13:56:57,673 - #5 ;
+INFO  13:56:57,673 - #3 {
+INFO  13:56:57,673 - #18 class
+INFO  13:56:57,674 - #18 Tina
+INFO  13:56:57,674 - #3 {
+ERROR 13:56:57,674 - 
+Sintaksna greska na liniji 9
+ERROR 13:56:57,675 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 9

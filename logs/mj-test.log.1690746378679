@@ -1,0 +1,65 @@
+INFO  21:44:53,190 - Compiling source file: C:\Users\krist\Documents\1. SEMESTAR\PP1\projekat\Projekat22_23\workspace\MJCompiler\test\program.mj
+INFO  21:44:53,287 - #2 program
+INFO  21:44:53,287 - #18 MJProgram
+INFO  21:44:53,287 - #18 int
+INFO  21:44:53,289 - #18 x
+INFO  21:44:53,291 - #5 ;
+INFO  21:44:53,293 - #18 int
+INFO  21:44:53,294 - #18 y
+INFO  21:44:53,294 - #5 ;
+INFO  21:44:53,294 - #3 {
+INFO  21:44:53,294 - #18 int
+INFO  21:44:53,295 - #18 k
+INFO  21:44:53,295 - #6 (
+INFO  21:44:53,296 - #7 )
+INFO  21:44:53,297 - #18 int
+INFO  21:44:53,298 - #18 c
+INFO  21:44:53,298 - #5 ;
+INFO  21:44:53,298 - #3 {
+INFO  21:44:53,298 - #18 c
+INFO  21:44:53,299 - #12 =
+INFO  21:44:53,299 - #15 1
+INFO  21:44:53,301 - #5 ;
+INFO  21:44:53,302 - #10 return
+INFO  21:44:53,302 - #18 c
+INFO  21:44:53,302 - #11 +
+INFO  21:44:53,302 - #15 2
+INFO  21:44:53,305 - #5 ;
+INFO  21:44:53,305 - #4 }
+INFO  21:44:53,305 - #18 int
+INFO  21:44:53,306 - #18 main
+INFO  21:44:53,306 - #6 (
+INFO  21:44:53,306 - #7 )
+INFO  21:44:53,306 - #3 {
+INFO  21:44:53,307 - #18 y
+INFO  21:44:53,307 - #12 =
+INFO  21:44:53,307 - #15 2
+INFO  21:44:53,307 - #5 ;
+INFO  21:44:53,307 - #18 x
+INFO  21:44:53,307 - #12 =
+INFO  21:44:53,307 - #18 y
+INFO  21:44:53,307 - #11 +
+INFO  21:44:53,307 - #15 2
+INFO  21:44:53,307 - #5 ;
+INFO  21:44:53,307 - #18 y
+INFO  21:44:53,307 - #12 =
+INFO  21:44:53,308 - #18 k
+INFO  21:44:53,308 - #6 (
+INFO  21:44:53,308 - #7 )
+INFO  21:44:53,310 - #11 +
+INFO  21:44:53,310 - #15 3
+INFO  21:44:53,310 - #5 ;
+INFO  21:44:53,310 - #9 print
+INFO  21:44:53,310 - #6 (
+INFO  21:44:53,310 - #18 y
+INFO  21:44:53,310 - #7 )
+INFO  21:44:53,311 - #5 ;
+INFO  21:44:53,311 - #10 return
+INFO  21:44:53,311 - #15 0
+INFO  21:44:53,311 - #5 ;
+INFO  21:44:53,311 - #4 }
+INFO  21:44:53,311 - #4 }
+ERROR 21:44:53,321 - Nekompatibilni tipovi u izrazu uz addop. na liniji 7
+ERROR 21:44:53,321 - Tip izraza u return naredbi ne slaze se sa tipom povratne vrednosti funkcije k na liniji 7
+ERROR 21:44:53,321 - Nekompatibilni tipovi u izrazu uz addop. na liniji 12
+ERROR 21:44:53,323 - Nekompatibilni tipovi u izrazu uz addop. na liniji 13

@@ -1,0 +1,84 @@
+INFO  14:24:58,725 - Compiling source file: C:\Users\krist\Documents\1. SEMESTAR\PP1\projekat\Projekat22_23\workspace\MJCompiler\test\program.mj
+INFO  14:24:58,773 - #2 program
+INFO  14:24:58,773 - #18 MJProgram
+INFO  14:24:58,773 - #18 int
+INFO  14:24:58,774 - #18 x
+INFO  14:24:58,775 - #5 ;
+INFO  14:24:58,777 - #18 int
+INFO  14:24:58,778 - #18 y
+INFO  14:24:58,778 - #5 ;
+INFO  14:24:58,778 - #18 int
+INFO  14:24:58,778 - #18 u
+INFO  14:24:58,778 - #8 ,
+INFO  14:24:58,778 - #18 k
+INFO  14:24:58,778 - #5 ;
+INFO  14:24:58,778 - #14 const
+INFO  14:24:58,778 - #18 int
+INFO  14:24:58,778 - #18 z
+INFO  14:24:58,779 - #12 =
+INFO  14:24:58,779 - #15 7
+INFO  14:24:58,779 - #8 ,
+INFO  14:24:58,779 - #18 c
+INFO  14:24:58,779 - #12 =
+INFO  14:24:58,780 - #15 7
+INFO  14:24:58,780 - #5 ;
+INFO  14:24:58,780 - #3 {
+INFO  14:24:58,781 - #18 int
+INFO  14:24:58,782 - #18 k
+INFO  14:24:58,782 - #6 (
+INFO  14:24:58,782 - #7 )
+INFO  14:24:58,784 - #18 int
+INFO  14:24:58,785 - #18 c
+INFO  14:24:58,785 - #8 ,
+INFO  14:24:58,785 - #18 t
+INFO  14:24:58,785 - #5 ;
+INFO  14:24:58,785 - #3 {
+INFO  14:24:58,785 - #18 c
+INFO  14:24:58,786 - #12 =
+INFO  14:24:58,786 - #15 1
+INFO  14:24:58,787 - #5 ;
+INFO  14:24:58,787 - #10 return
+INFO  14:24:58,787 - #18 c
+INFO  14:24:58,787 - #11 +
+INFO  14:24:58,787 - #15 2
+INFO  14:24:58,788 - #5 ;
+INFO  14:24:58,789 - #4 }
+INFO  14:24:58,789 - #18 int
+INFO  14:24:58,789 - #18 main
+INFO  14:24:58,789 - #6 (
+INFO  14:24:58,789 - #7 )
+INFO  14:24:58,790 - #3 {
+INFO  14:24:58,790 - #18 y
+INFO  14:24:58,790 - #12 =
+INFO  14:24:58,790 - #15 2
+INFO  14:24:58,790 - #5 ;
+INFO  14:24:58,790 - #18 x
+INFO  14:24:58,790 - #12 =
+INFO  14:24:58,790 - #18 y
+INFO  14:24:58,790 - #11 +
+INFO  14:24:58,790 - #15 2
+INFO  14:24:58,790 - #5 ;
+INFO  14:24:58,790 - #18 y
+INFO  14:24:58,790 - #12 =
+INFO  14:24:58,790 - #18 k
+INFO  14:24:58,790 - #6 (
+INFO  14:24:58,790 - #7 )
+INFO  14:24:58,791 - #11 +
+INFO  14:24:58,791 - #15 3
+INFO  14:24:58,791 - #5 ;
+INFO  14:24:58,792 - #9 print
+INFO  14:24:58,792 - #6 (
+INFO  14:24:58,792 - #18 y
+INFO  14:24:58,792 - #7 )
+INFO  14:24:58,792 - #5 ;
+INFO  14:24:58,792 - #10 return
+INFO  14:24:58,792 - #15 0
+INFO  14:24:58,792 - #5 ;
+INFO  14:24:58,792 - #4 }
+INFO  14:24:58,792 - #4 }
+INFO  14:24:58,801 - Obradjuje se metoda k na liniji 7
+ERROR 14:24:58,802 - Semanticka greska na liniji 7: funcija k nema return iskaz!
+INFO  14:24:58,802 - Obradjuje se metoda main na liniji 12
+ERROR 14:24:58,802 - Semanticka greska na liniji 12: funcija main nema return iskaz!
+INFO  14:24:58,802 - Print calls = 0
+ERROR 14:24:58,802 - Parsiranje NIJE uspesno zavrseno!

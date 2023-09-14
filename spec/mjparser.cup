@@ -1,0 +1,375 @@
+package rs.ac.bg.etf.pp1;
+
+import java_cup.runtime.*;
+import org.apache.log4j.*;
+
+// import java.io.*;
+import rs.ac.bg.etf.pp1.ast.*;
+
+
+parser code {:
+	
+	boolean errorDetected = false;
+	
+	Logger log = Logger.getLogger(getClass());
+   
+   
+    // slede redefinisani metodi za prijavu gresaka radi izmene teksta poruke
+     
+    public void report_fatal_error(String message, Object info) throws java.lang.Exception {
+      done_parsing();
+      report_error(message, info);
+    }
+  
+    public void syntax_error(Symbol cur_token) {
+        report_error("\nSintaksna greska", cur_token);
+    }
+  
+    public void unrecovered_syntax_error(Symbol cur_token) throws java.lang.Exception {
+        report_fatal_error("Fatalna greska, parsiranje se ne moze nastaviti", cur_token);
+    }
+
+    public void report_error(String message, Object info) {
+    	errorDetected = true;
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" na liniji ").append(((Symbol)info).left);
+        log.error(msg.toString());
+    }
+    
+    public void report_info(String message, Object info) {
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" na liniji ").append(((Symbol)info).left);
+        log.info(msg.toString());
+    }
+    
+:}
+
+scan with {:
+	Symbol s = this.getScanner().next_token();
+	if (s != null && s.value != null) 
+		log.info(s.toString() + " " + s.value.toString());
+	return s;
+:}
+
+
+terminal PROG, LBRACE, RBRACE, SEMI, LPAREN, RPAREN, COMMA, PRINT, RETURN, PLUS, EQUAL, VOID, CONST;
+terminal Integer NUMCONST ;
+terminal Character CHARCONST;
+terminal Boolean BOOLCONST;
+terminal String IDENT ;
+terminal IF, ELSE;
+terminal LSQRBRACE, RSQRBRACE, EXTENDS, CLASS, MINUS, MUL, DIV, MOD;
+terminal ISEQUAL, NOTEQ, GT, GEQ, LT, LEQ, DOT, AND, OR, NEW, INCR, DECR;
+terminal WHILE;
+terminal ARROW;
+terminal FOREACH;
+terminal READ;
+terminal BREAK;
+terminal CONTINUE;
+terminal FINDANY;
+
+
+nonterminal GlobDeclList;
+nonterminal ConstDecl, ConstDeclList, ConstDeclItem;
+nonterminal VarDecl, Var, VarList;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct VarDeclList;
+nonterminal SQRBrackets;
+nonterminal ClassDecl, ClassName;
+nonterminal MethodDeclList;
+nonterminal FormPar, FormPars, FormParsOrNot;
+nonterminal StatementList, Statement;
+nonterminal Unmatched, Matched;
+nonterminal ActPars, ActParsList; 
+nonterminal Addop;
+nonterminal Mulop;
+nonterminal Relop;
+nonterminal Assignop;
+nonterminal Label;
+nonterminal CondFact;
+nonterminal CondTerm;
+nonterminal Condition;
+nonterminal DesignatorList;
+nonterminal ExtendsTypeHlp, ConstrMethHlp;
+nonterminal ExprActParsHlp;
+nonterminal ExprList, ExprOrNoExpr;
+nonterminal DesignatorStatement, DesignatorStatementItem;
+nonterminal DesignatorOrNoDesig;
+nonterminal ExprNumConstHlp;
+nonterminal Program, MethodDecl;
+nonterminal DesignatorHlp;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, MethodTypeName, Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Expr, Term, Factor; 
+
+precedence left ELSE;
+
+
+Program ::= (Program) PROG ProgName  GlobDeclList LBRACE MethodDeclList RBRACE ;
+
+ProgName ::= (ProgName) IDENT:name ;
+
+GlobDeclList ::=	(GlobDeclConst) GlobDeclList ConstDecl
+				 	|
+					(GlobDeclVar) GlobDeclList VarDecl
+					|
+					(GlobDeclClass) GlobDeclList ClassDecl
+					|
+					(NoGlobDecl)
+					;
+						
+									 
+ConstDecl ::= (ConstDecl) CONST Type ConstDeclList SEMI;	
+
+						
+ConstDeclList ::=	(ConstDeclListMulti) ConstDeclList COMMA ConstDeclItem
+					|
+					(ConstDeclListSingle) ConstDeclItem 
+					;
+
+ConstDeclItem ::=	(ConstDeclItemNum) IDENT:name EQUAL NUMCONST:value
+					|
+					(ConstDeclItemChar) IDENT:name EQUAL CHARCONST:value
+					|
+					(ConstDeclItemBool) IDENT:name EQUAL BOOLCONST:value 
+					;
+
+								
+VarDecl ::= (VarDeclaration) Type VarList SEMI
+			|
+			(VarDeclErr) Type error SEMI;
+
+
+Var ::= (VarBracketsExist) IDENT:name LSQRBRACE RSQRBRACE
+		|
+		(VarNoBrackets) IDENT:name						
+		;
+
+
+SQRBrackets ::= (SQRBracketsExist) LSQRBRACE RSQRBRACE 
+				|
+				(NoSQRBrackets) 
+				;
+
+VarList ::= (VarListExists) VarList COMMA Var
+			|
+			(VarListExistsErr) error COMMA Var
+			|
+			(NoVarList) Var
+			;
+			
+VarDeclList ::= (VarDeclListExists) VarDeclList VarDecl
+				|
+				(NoVarDeclList)
+				;
+
+
+ClassDecl ::= (ClassDecl) ClassName ExtendsTypeHlp LBRACE VarDeclList ConstrMethHlp RBRACE ;
+
+ClassName ::= (ClassName) CLASS IDENT;
+
+
+
+ExtendsTypeHlp ::=	(ExtendsTypeHlpExists) EXTENDS Type
+					|
+					(NoExtendsTypeHelper)
+					;
+					
+ConstrMethHlp ::=	(ConstrMethHlpExists) LBRACE MethodDeclList RBRACE
+					|
+					(NoConstMethHelper)
+					;
+
+MethodDeclList ::=	(MethodDeclListExists) MethodDeclList MethodDecl
+					|
+					(NoMethodDecl)
+					;
+
+MethodDecl ::=	(MethodDecl) MethodTypeName LPAREN FormParsOrNot RPAREN VarDeclList LBRACE StatementList RBRACE;
+
+
+MethodTypeName ::=	(MethodType) Type IDENT:name 
+					|
+					(MethodVoid) VOID IDENT:name
+					;
+
+FormParsOrNot ::=	(FormParsExists) FormPars 
+					|
+					(NoFormPars)
+					;
+					
+FormPars ::= 	(FormParsMulti) FormPars COMMA FormPar
+				|
+				(FormParsSingle) FormPar
+				;
+ 
+									
+FormPar ::= (FormPar) Type IDENT:name SQRBrackets;
+
+
+Type ::= (Type) IDENT:name ;
+
+
+StatementList ::=	(StatementListExists) StatementList Statement 
+					|
+				  	(NoStmt) /* epsilon */
+				  	;
+
+Statement ::=	(DesignatorStmt) DesignatorStatement SEMI
+				|
+				(ReturnStmt) RETURN ExprOrNoExpr SEMI
+				|
+				(PrintStmt) PRINT LPAREN Expr ExprNumConstHlp RPAREN SEMI
+				|
+				(WhileStmt) WHILE LPAREN Condition RPAREN Statement
+				|
+				(MultipleStmt) LBRACE StatementList RBRACE
+				|
+				(ForEachStmt) Designator DOT FOREACH LPAREN IDENT ARROW Statement RPAREN SEMI
+				|
+				(ReadStmt) READ LPAREN Designator RPAREN SEMI
+				|
+				(BreakStmt) BREAK SEMI
+				|
+				(ContinueStmt) CONTINUE SEMI
+				|
+				(IfElseStmt) IF LPAREN Condition RPAREN Statement ELSE Statement
+				|
+				(IfStmt) IF LPAREN Condition RPAREN Statement 
+				; 
+
+ExprNumConstHlp ::=	(ExprHelper) 
+					|
+					(ExprNumConstHelper) COMMA NUMCONST:len
+					;		  
+
+DesignatorStatement ::=	(DesignatorStatement) Designator DesignatorStatementItem;
+
+DesignatorStatementItem ::=	(DsgnStmtAssignop) Assignop Expr
+							|
+							(DsgnStmtFindAny) Assignop Designator DOT FINDANY LPAREN Expr RPAREN
+							|
+							(DsgnStmtAssignopErr) Assignop error
+							|
+							(DsgnStmtItemActPars) LPAREN ActPars RPAREN
+							|
+							(DsgnStmtItemIncr) INCR
+							|
+							(DsgnStmtItemDecr) DECR
+							;
+							
+DesignatorList ::=	(DesignatorListMulti) DesignatorList DOT Designator
+					|
+					(DesignatorListSingle) Designator
+					;   
+			
+Designator ::=	(DesignatorSingle) Designator DOT IDENT:name
+				|
+				(DesignatorArray) DesignatorHlp LSQRBRACE Expr RSQRBRACE
+				|
+				(DesignatorIdent) IDENT:name
+				;
+
+DesignatorHlp ::= (DesignatorHlp) Designator;
+				
+			
+DesignatorOrNoDesig ::= (DesignatorExists) Designator
+						|
+						(NoDesignator)
+						;
+						
+													
+ActPars ::=	(ActParsExists) ActParsList 
+			| 
+			(NoActuals) /* epsilon */ 
+			;
+			   
+ActParsList ::=		(ActParsListMulti) ActParsList COMMA Expr
+					|
+					(ActParsListSingle) Expr
+					;
+
+				
+Condition ::=	(ConditionMulti) Condition OR CondTerm
+				|
+				(ConditionSingle) CondTerm
+				;
+		
+CondTerm ::=	(CondTermMulti) CondTerm AND CondFact
+				|
+				(CondTermSingle) CondFact
+				;
+				
+				 			
+			
+CondFact ::=	(CondFactExpr) Expr
+				|
+				(CondFactExprRelop) Expr Relop Expr
+				;					
+		 
+ExprOrNoExpr ::=	(ExprExists) Expr 
+					|
+					(NoExpr)
+					;		
+											 
+Expr ::=	(ExprMulti) Expr Addop Term
+			|
+			(ExprSingleMinus) MINUS Term
+			|
+			(ExprSingle) Term
+			;
+			
+Term ::=	(TermMulti) Term Mulop Factor
+			|
+			(TermSingle) Factor
+			;
+
+Factor ::=	(FactNumConst) NUMCONST:value
+			|
+			(FactCharConst) CHARCONST:value
+			|
+			(FactBoolConst) BOOLCONST:value
+			|
+			(FactNewInstance) NEW Type ExprActParsHlp
+			|
+		  	(VarDesig) Designator
+		    |
+		  	(FuncCall) Designator LPAREN ActPars RPAREN 
+		  	|
+		  	(FactExpr) LPAREN Expr RPAREN
+		  	;
+
+ExprActParsHlp ::=	(FactorExpr) LSQRBRACE Expr RSQRBRACE
+					|
+					(FactorActPars) LPAREN ActPars RPAREN
+					;
+
+Label ::= (Label) IDENT;
+
+Assignop ::= (Assignop) EQUAL;
+
+Relop ::=	(IsEqual) ISEQUAL
+			|
+			(NotEqual) NOTEQ
+			|
+			(GreaterThan) GT
+			|
+			(GreaterEqual) GEQ
+			|
+			(LessThan) LT
+			|
+			(LessEqual) LEQ
+			;
+			
+Addop ::=	(Add) PLUS 
+			|
+			(Sub) MINUS
+			;
+			
+Mulop ::=	(Mul) MUL
+			|
+			(Div) DIV
+			|
+			(Mod) MOD
+			;			

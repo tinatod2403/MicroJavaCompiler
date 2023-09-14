@@ -1,0 +1,67 @@
+INFO  21:46:18,684 - Compiling source file: C:\Users\krist\Documents\1. SEMESTAR\PP1\projekat\Projekat22_23\workspace\MJCompiler\test\program.mj
+INFO  21:46:18,777 - #2 program
+INFO  21:46:18,778 - #18 MJProgram
+INFO  21:46:18,778 - #18 int
+INFO  21:46:18,779 - #18 x
+INFO  21:46:18,781 - #5 ;
+INFO  21:46:18,782 - #18 int
+INFO  21:46:18,783 - #18 y
+INFO  21:46:18,783 - #5 ;
+INFO  21:46:18,783 - #3 {
+INFO  21:46:18,783 - #18 int
+INFO  21:46:18,785 - #18 k
+INFO  21:46:18,785 - #6 (
+INFO  21:46:18,786 - #7 )
+INFO  21:46:18,787 - #18 int
+INFO  21:46:18,787 - #18 c
+INFO  21:46:18,787 - #5 ;
+INFO  21:46:18,787 - #3 {
+INFO  21:46:18,788 - #18 c
+INFO  21:46:18,788 - #12 =
+INFO  21:46:18,788 - #15 1
+INFO  21:46:18,789 - #5 ;
+INFO  21:46:18,790 - #10 return
+INFO  21:46:18,791 - #18 c
+INFO  21:46:18,791 - #11 +
+INFO  21:46:18,791 - #15 2
+INFO  21:46:18,793 - #5 ;
+INFO  21:46:18,793 - #4 }
+INFO  21:46:18,794 - #18 int
+INFO  21:46:18,794 - #18 main
+INFO  21:46:18,794 - #6 (
+INFO  21:46:18,794 - #7 )
+INFO  21:46:18,794 - #3 {
+INFO  21:46:18,794 - #18 y
+INFO  21:46:18,794 - #12 =
+INFO  21:46:18,796 - #15 2
+INFO  21:46:18,796 - #5 ;
+INFO  21:46:18,796 - #18 x
+INFO  21:46:18,796 - #12 =
+INFO  21:46:18,796 - #18 y
+INFO  21:46:18,796 - #11 +
+INFO  21:46:18,796 - #15 2
+INFO  21:46:18,796 - #5 ;
+INFO  21:46:18,796 - #18 y
+INFO  21:46:18,796 - #12 =
+INFO  21:46:18,796 - #18 k
+INFO  21:46:18,796 - #6 (
+INFO  21:46:18,797 - #7 )
+INFO  21:46:18,798 - #11 +
+INFO  21:46:18,798 - #15 3
+INFO  21:46:18,798 - #5 ;
+INFO  21:46:18,798 - #9 print
+INFO  21:46:18,798 - #6 (
+INFO  21:46:18,798 - #18 y
+INFO  21:46:18,798 - #7 )
+INFO  21:46:18,798 - #5 ;
+INFO  21:46:18,798 - #10 return
+INFO  21:46:18,799 - #15 0
+INFO  21:46:18,799 - #5 ;
+INFO  21:46:18,799 - #4 }
+INFO  21:46:18,799 - #4 }
+ERROR 21:46:18,809 - Nekompatibilni tipovi u izrazu uz addop. na liniji 7
+ERROR 21:46:18,809 - Funkcija k nema return iskaz, a nije VOID! na liniji 5
+ERROR 21:46:18,810 - Nekompatibilni tipovi u izrazu uz addop. na liniji 12
+ERROR 21:46:18,810 - Nekompatibilni tipovi u izrazu uz addop. na liniji 13
+ERROR 21:46:18,810 - Funkcija main nema return iskaz, a nije VOID! na liniji 10
+ERROR 21:46:18,810 - Parsiranje NIJE uspesno zavrseno!

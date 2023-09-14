@@ -1,0 +1,12 @@
+INFO  16:37:13,398 - Compiling source file: C:\Users\krist\Documents\1. SEMESTAR\PP1\projekat\Projekat22_23\workspace\MJCompiler\test\program.mj
+INFO  16:37:13,442 - #2 program
+INFO  16:37:13,443 - #18 p
+INFO  16:37:13,443 - #14 const
+INFO  16:37:13,444 - #18 int
+INFO  16:37:13,444 - #18 size
+INFO  16:37:13,444 - #12 =
+INFO  16:37:13,445 - #15 10
+INFO  16:37:13,445 - #5 ;
+ERROR 16:37:13,445 - 
+Sintaksna greska na liniji 3
+ERROR 16:37:13,445 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 3

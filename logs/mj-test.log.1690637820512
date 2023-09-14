@@ -1,0 +1,67 @@
+INFO  17:41:41,070 - Compiling source file: C:\Users\krist\Documents\1. SEMESTAR\PP1\projekat\Projekat22_23\workspace\MJCompiler\test\program.mj
+INFO  17:41:41,151 - #2 program
+INFO  17:41:41,151 - #18 MJProgram
+INFO  17:41:41,151 - #18 int
+INFO  17:41:41,154 - #18 x
+INFO  17:41:41,154 - #5 ;
+INFO  17:41:41,155 - #18 int
+INFO  17:41:41,157 - #18 y
+INFO  17:41:41,157 - #5 ;
+INFO  17:41:41,157 - #3 {
+INFO  17:41:41,157 - #18 int
+INFO  17:41:41,158 - #18 k
+INFO  17:41:41,158 - #6 (
+INFO  17:41:41,159 - #7 )
+INFO  17:41:41,160 - #18 int
+INFO  17:41:41,161 - #18 c
+INFO  17:41:41,161 - #5 ;
+INFO  17:41:41,161 - #3 {
+INFO  17:41:41,161 - #18 c
+INFO  17:41:41,162 - #12 =
+INFO  17:41:41,163 - #15 1
+INFO  17:41:41,163 - #5 ;
+INFO  17:41:41,165 - #10 return
+INFO  17:41:41,165 - #18 c
+INFO  17:41:41,165 - #11 +
+INFO  17:41:41,165 - #15 2
+INFO  17:41:41,167 - #5 ;
+INFO  17:41:41,168 - #4 }
+INFO  17:41:41,168 - #18 int
+INFO  17:41:41,169 - #18 main
+INFO  17:41:41,169 - #6 (
+INFO  17:41:41,169 - #7 )
+INFO  17:41:41,169 - #3 {
+INFO  17:41:41,169 - #18 y
+INFO  17:41:41,169 - #12 =
+INFO  17:41:41,169 - #15 2
+INFO  17:41:41,169 - #5 ;
+INFO  17:41:41,169 - #18 x
+INFO  17:41:41,169 - #12 =
+INFO  17:41:41,169 - #18 y
+INFO  17:41:41,169 - #11 +
+INFO  17:41:41,170 - #15 2
+INFO  17:41:41,170 - #5 ;
+INFO  17:41:41,170 - #18 y
+INFO  17:41:41,170 - #12 =
+INFO  17:41:41,170 - #18 k
+INFO  17:41:41,170 - #6 (
+INFO  17:41:41,170 - #7 )
+INFO  17:41:41,171 - #11 +
+INFO  17:41:41,171 - #15 3
+INFO  17:41:41,171 - #5 ;
+INFO  17:41:41,171 - #9 print
+INFO  17:41:41,171 - #6 (
+INFO  17:41:41,171 - #18 y
+INFO  17:41:41,171 - #7 )
+INFO  17:41:41,171 - #5 ;
+INFO  17:41:41,171 - #10 return
+INFO  17:41:41,172 - #15 0
+INFO  17:41:41,172 - #5 ;
+INFO  17:41:41,172 - #4 }
+INFO  17:41:41,172 - #4 }
+INFO  17:41:41,181 - Obradjuje se metoda k na liniji 5
+ERROR 17:41:41,181 - Semanticka greska na liniji 5: funcija k nema return iskaz!
+INFO  17:41:41,181 - Obradjuje se metoda main na liniji 10
+ERROR 17:41:41,181 - Semanticka greska na liniji 10: funcija main nema return iskaz!
+INFO  17:41:41,181 - Print calls = 0
+ERROR 17:41:41,182 - Parsiranje NIJE uspesno zavrseno!

@@ -1,0 +1,16 @@
+INFO  16:27:43,251 - Compiling source file: C:\Users\krist\Documents\1. SEMESTAR\PP1\projekat\Projekat22_23\workspace\MJCompiler\test\program.mj
+INFO  16:27:43,278 - #2 program
+INFO  16:27:43,278 - #18 MJProgram
+INFO  16:27:43,278 - #18 int
+INFO  16:27:43,279 - #18 x
+INFO  16:27:43,280 - #5 ;
+INFO  16:27:43,280 - #18 int
+INFO  16:27:43,281 - #18 y
+INFO  16:27:43,281 - #5 ;
+INFO  16:27:43,281 - #14 const
+INFO  16:27:43,281 - #18 int
+INFO  16:27:43,281 - #18 z
+INFO  16:27:43,281 - #5 ;
+ERROR 16:27:43,281 - 
+Sintaksna greska na liniji 2
+ERROR 16:27:43,282 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 2

@@ -1,0 +1,39 @@
+INFO  11:08:32,216 - Compiling source file: C:\Users\krist\Documents\1. SEMESTAR\PP1\projekat\Projekat22_23\workspace\MJCompiler\test\program.mj
+INFO  11:08:32,323 - #2 program
+INFO  11:08:32,323 - #20 MJProgram
+INFO  11:08:32,323 - #20 int
+INFO  11:08:32,327 - #20 x
+INFO  11:08:32,329 - #5 ;
+INFO  11:08:32,329 - #20 int
+INFO  11:08:32,331 - #20 y
+INFO  11:08:32,331 - #5 ;
+INFO  11:08:32,331 - #20 int
+INFO  11:08:32,331 - #20 u
+INFO  11:08:32,331 - #8 ,
+INFO  11:08:32,331 - #20 k
+INFO  11:08:32,331 - #5 ;
+INFO  11:08:32,332 - #14 const
+INFO  11:08:32,332 - #20 int
+INFO  11:08:32,332 - #20 z
+INFO  11:08:32,332 - #12 =
+INFO  11:08:32,332 - #17 7
+INFO  11:08:32,332 - #5 ;
+INFO  11:08:32,332 - #14 const
+INFO  11:08:32,334 - #20 char
+INFO  11:08:32,334 - #20 c
+INFO  11:08:32,334 - #12 =
+INFO  11:08:32,335 - #18 a
+INFO  11:08:32,335 - #5 ;
+INFO  11:08:32,335 - #3 {
+INFO  11:08:32,335 - #20 int
+INFO  11:08:32,336 - #20 k
+INFO  11:08:32,336 - #6 (
+INFO  11:08:32,338 - #7 )
+INFO  11:08:32,340 - #20 int
+INFO  11:08:32,342 - #20 c
+INFO  11:08:32,342 - #8 ,
+INFO  11:08:32,342 - #20 char
+INFO  11:08:32,342 - #20 t
+ERROR 11:08:32,342 - 
+Sintaksna greska na liniji 7
+ERROR 11:08:32,342 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 7
